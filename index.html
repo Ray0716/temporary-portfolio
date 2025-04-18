@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ray's Personal Site</title>
+  <link rel="stylesheet" href="index.css">
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()[]{};':<>?/";
+      let iteration = 0;
+      const header = document.querySelector(".nameheader");
+      header.dataset.value = header.innerText;
+
+      const animateHeader = () => {
+        iteration = 0;
+        const interval = setInterval(() => {
+          header.innerText = header.innerText.split("")
+            .map((letter, index) => {
+              if (index < iteration) {
+                return header.dataset.value[index];
+              }
+
+              return letters[Math.floor(Math.random() * letters.length)];
+            })
+            .join("");
+
+          if (iteration >= header.dataset.value.length) {
+            clearInterval(interval);
+          }
+
+          iteration += 1 / 3;
+        }, 30);
+      };
+
+      // Initial animation on page load
+      animateHeader();
+
+      // Animation on mouse over
+      header.addEventListener("mouseover", animateHeader);
+    });
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100..900;1,100..900&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <div class="container">
+    <header >
+      <h1 class="nameheader" data-value="Hi, I'm Ray.">Hi, I'm Ray.</h1>
+    </header>
+
+    <div class="top-links">
+      <span>@ruirui0716</span>
+      <div class="right-links">
+        <a href="mailto:youremail@example.com">Email</a>
+        <a href="mailto:youremail@example.com">LinkedIn</a>
+        <a href="mailto:youremail@example.com">Github</a>
+        <a href="/resume.pdf">Resume</a>
+      </div>
+    </div>
+
+    <main>
+      <p>
+        I'm a junior HS Student in NY, passionate about creating new things. I'm currently focusing on a summer research fellowship at <span style="text-decoration: underline;"><a href="https://www.stonybrook.edu/commcms/simons/index.php" target="_blank" style="color: white; transition: all 0.3s ease-in-out;" onmouseover="this.style.color='black'; this.style.backgroundColor='white';" onmouseout="this.style.color='white'; this.style.backgroundColor='transparent';">Stony Brook University</a></span> with a concentration in Mechanical Engineering. <br> When I'm not <span style="text-decoration: underline;"><a href="https://www.thenorthshoreleader.com/single-post/li-students-compete-in-nasa-robot-competition" target="_blank" style="color: white; transition: all 0.3s ease-in-out;" onmouseover="this.style.color='black'; this.style.backgroundColor='white';" onmouseout="this.style.color='white'; this.style.backgroundColor='transparent';">writing code for the space station</a></span> or designing on my robotics team, I enjoy bike riding. Despite my focus in STEM, I'm also extremely passionate about Piano and am always looking for more competitions to challenge myself. 
+      </p>
+      <p>
+        This website is currently <em>under construction</em>. The finished website will serve as an archive for my past projects and display what I'm currently working on. In the meantime, please check out my resume <span style="text-decoration: underline;"><a href="mailto:raytang11792@gmail.com" target="_blank" style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255); transition: all 0.3s ease-in-out;" onmouseover="this.style.color='white'; this.style.backgroundColor='black';" onmouseout="this.style.color='black'; this.style.backgroundColor='white';">  here →</a></span>.
+      </p>
+      <p>
+        Always open to connect — feel free to reach out via <span style="text-decoration: underline;"><a href="mailto:raytang11792@gmail.com" target="_blank" style="color: white; transition: all 0.3s ease-in-out;" onmouseover="this.style.color='black'; this.style.backgroundColor='white';" onmouseout="this.style.color='white'; this.style.backgroundColor='transparent';">email</a></span> or DM me on <span style="text-decoration: underline;"><a href="https://www.instagram.com/ruirui0716__/" target="_blank" style="color: white; transition: all 0.3s ease-in-out;" onmouseover="this.style.color='black'; this.style.backgroundColor='white';" onmouseout="this.style.color='white'; this.style.backgroundColor='transparent';">social media</a></span>! 
+      </p>
+    </main>
+  </div>
+</body>
+</html>
