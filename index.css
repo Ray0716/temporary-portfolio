@@ -113,6 +113,7 @@ body {
 
 .shooting-star {
   position: absolute;
+  margin-top: -170px;
   width: 120px;
   height: 1px;
   background: linear-gradient(270deg, white, transparent);
@@ -120,8 +121,8 @@ body {
 }
 
 .shooting-star:nth-child(1) {
-  top: 20%;
-  left: -100px;
+  top: 10%;
+  left: -150px;
   animation-delay: 0s;
 }
 
@@ -135,6 +136,30 @@ body {
   top: 50%;
   left: -140px;
   animation-delay: 2s;
+}
+
+.shooting-star:nth-child(4) {
+  top:70%;
+  left: -160px;
+  animation-delay: 3s;
+}
+
+.shooting-star:nth-child(5) {
+  top:95%;
+  left: -190px;
+  animation-delay: 4s;
+}
+
+.shooting-star:nth-child(6) {
+  
+  left: -230px;
+  animation-delay: 5s;
+}
+
+.shooting-star:nth-child(7) {
+  
+  left: -270px;
+  animation-delay: 6s;
 }
 
 @keyframes twinkle {
