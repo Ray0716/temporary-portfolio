@@ -3,15 +3,15 @@ body {
     padding: 0;
     /*background-color: #05355d; /* soft blue */
     background: linear-gradient(to bottom, #200b2b, #1b2735 70%, #090a0f);
-    overflow-y:scroll;
+    overflow-y:hidden;
     overflow-x:hidden;
     font-family: IBM Plex Sans, sans-serif;
     color: #ffffff;
   }
   
   .container {
-    max-width: 700px;
-    margin: 140px auto;
+    max-width: 760px;
+    margin: 120px auto;
     padding: 0 0px;
   }
   
@@ -48,7 +48,7 @@ body {
   
   main p {
     line-height: 1.7;
-    font-size: 1.05rem;
+    font-size: 1.0rem;
     margin-bottom: 1.5rem;
     font-weight: 270;
   }
@@ -178,7 +178,7 @@ body {
     opacity: 1;
   }
   100% {
-    transform: translateX(120vw) translateY(90vh) rotate(25deg);
+    transform: translateX(90vw) translateY(60vh) rotate(25deg);
     opacity: 0;
   }
 }
