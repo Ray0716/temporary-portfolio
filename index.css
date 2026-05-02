@@ -3,7 +3,7 @@ body {
     padding: 0;
     /*background-color: #05355d; /* soft blue */
     background: linear-gradient(to bottom, #200b2b, #1b2735 70%, #090a0f);
-    overflow-y:hidden;
+    overflow-y:auto;
     overflow-x:hidden;
     font-family: IBM Plex Sans, sans-serif;
     color: #ffffff;
@@ -84,7 +84,7 @@ body {
     }
   
     main p {
-      font-size: 0.8rem;
+      font-size: 0.75rem;
       font-weight: 250;
     }
   }
@@ -178,7 +178,7 @@ body {
     opacity: 1;
   }
   100% {
-    transform: translateX(90vw) translateY(60vh) rotate(25deg);
+    transform: translateX(100vw) translateY(50vh) rotate(25deg);
     opacity: 0;
   }
 }
